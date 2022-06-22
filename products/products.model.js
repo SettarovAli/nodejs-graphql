@@ -1,11 +1,11 @@
 const products = [
   {
-    id: 'redshoe',
+    id: 1,
     description: 'Red Shoe',
     price: 42.12,
   },
   {
-    id: 'bluejeans',
+    id: 2,
     description: 'Blue Jeans',
     price: 55.55,
   },
@@ -21,7 +21,12 @@ function getProductsByPrice(min, max) {
   );
 }
 
+function getProductById(id) {
+  return products.find((product) => product.id === +id);
+}
+
 module.exports = {
   getAllProducts,
   getProductsByPrice,
+  getProductById,
 };
