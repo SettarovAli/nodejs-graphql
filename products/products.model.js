@@ -15,6 +15,13 @@ function getAllProducts() {
   return products;
 }
 
+function getProductsByPrice(min, max) {
+  return products.filter(
+    (product) => product.price >= min && product.price <= max
+  );
+}
+
 module.exports = {
   getAllProducts,
+  getProductsByPrice,
 };
